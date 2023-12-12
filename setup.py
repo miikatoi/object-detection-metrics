@@ -14,7 +14,7 @@ URL = "repo"
 EMAIL = ""
 AUTHOR = "Microsoft CSE"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = 0.01
+VERSION = 0.2
 
 FILEPATH = os.path.abspath(os.path.dirname(__file__))
 REQUIRED = []
