@@ -57,13 +57,13 @@ def match_preds_to_targets(predictions_df, labels_df):
     for image_name in unique_images:
 
         # get the predictions and labels for each image
-        if image_name in preds_df_indexed:
+        try:
             preds = preds_df_indexed.loc[[image_name]]
-        else:
+        except KeyError:
             preds = preds_df_indexed.iloc[0:0]
-        if image_name in labels_df_indexed:
+        try:
             labels = labels_df_indexed.loc[[image_name]]
-        else:
+        except KeyError:
             labels = labels_df_indexed.iloc[0:0]
 
         # create lists for all the bounding boxes, labels and scores
